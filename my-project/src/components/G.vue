@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
-    <h2>A3 訂單總明細表</h2>
+    <h2>G基本主檔</h2>
   </div>
 </template>
 

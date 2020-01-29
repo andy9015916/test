@@ -2,11 +2,14 @@ import Vue from "vue";
 import Router from "vue-router";
 import HelloWorld from "@/components/HelloWorld";
 import Hello2 from "@/components/Hello2";
-import A1 from "@/components/A1";
-import A2 from "@/components/A2";
-import A3 from "@/components/A3";
-import A4 from "@/components/A4";
-import A5 from "@/components/A5";
+import A from "@/components/A";
+import B from "@/components/B";
+import C from "@/components/C";
+import D from "@/components/D";
+import E from "@/components/E";
+import F from "@/components/F";
+import G from "@/components/G";
+import H from "@/components/H";
 Vue.use(Router);
 
 export default new Router({
@@ -22,29 +25,44 @@ export default new Router({
       component: Hello2
     },
     {
-      path: "/A1",
-      name: "A1",
-      component: A1
+      path: "/A",
+      name: "A",
+      component: A
     },
     {
-      path: "/A2",
-      name: "A2",
-      component: A2
+      path: "/B",
+      name: "B",
+      component: B
     },
     {
-      path: "/A3",
-      name: "A3",
-      component: A3
+      path: "/C",
+      name: "C",
+      component: C
     },
     {
-      path: "/A4",
-      name: "A4",
-      component: A4
+      path: "/D",
+      name: "D",
+      component: D
     },
     {
-      path: "/A5",
-      name: "A5",
-      component: A5
+      path: "/E",
+      name: "E",
+      component: E
+    },
+    {
+      path: "/F",
+      name: "F",
+      component: F
+    },
+    {
+      path: "/G",
+      name: "G",
+      component: G
+    },
+    {
+      path: "/H",
+      name: "H",
+      component: H
     }
   ]
 });
