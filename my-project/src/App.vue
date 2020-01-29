@@ -48,6 +48,7 @@
         <div class="container-fluid">
           <p>
             <router-view />
+            <img src="./assets/ec9aaebb.gif" />
             <!-- <img src="./assets/logo.png" /> -->
           </p>
         </div>
