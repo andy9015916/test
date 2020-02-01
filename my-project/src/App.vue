@@ -10,10 +10,9 @@
               <router-link to="/">Hello</router-link>
             </ul>
           </li>
-          </li>
-          <li class="nav-item" v-for="navbar in navbar">
+          <li class="nav-item" v-for="item in navbar">
             <ul>
-              <router-link :to="navbar.idd">{{ navbar.p }}</router-link>
+              <router-link :to="item.idd">{{ item.p }}</router-link>
             </ul>
           </li>
         </ul>
@@ -33,12 +32,11 @@
       <!-- Sidebar -->
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-          <li class="sidebar-brand" v-for="Sidebar in Sidebar">
-            <div v-if="$route.name==Sidebar.idd">
-              <a href="#">{{ Sidebar.p }}</a>
+          <li class="sidebar-brand" v-for="item in Sidebar">
+            <div v-if="$route.name==item.idd">
+              <a href="#">{{ item.p }}</a>
             </div>
-            <div v-else>
-            </div>
+            <div v-else></div>
           </li>
         </ul>
       </div>
@@ -205,12 +203,12 @@ body {
   width: 0;
   height: 100%;
   margin-left: -225px;
-   overflow-y: auto; 
+  overflow-y: auto;
   background: #245682;
-   -webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; 
+  transition: all 0.5s ease;
 }
 
 #sidebar-wrapper .sidebar-nav {
