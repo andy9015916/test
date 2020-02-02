@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
+    <!-- 範例程式https://jsbin.com/zusakamoze/edit?html,js,console,output -->
     <div class="form-group">
       <label>輸入資料:</label>
       <input type="text" name v-model="newitems.name" @keyup.enter="entt" />
@@ -36,6 +37,7 @@
           <td>{{item.age}}</td>
           <td>{{item.sex}}</td>
           <td>
+            <button @click="change($index)">修改</button>
             <button @click="deletePerson($index)">Delete</button>
           </td>
         </tr>
@@ -67,11 +69,16 @@ export default {
     entt: function() {
       this.items.push(this.newitems); //往items中新增newitems
       this.newitems = { name: "", age: "18", sex: "女" };
-    }, //新增元素
+    }, //案enter直接輸入
     addPerson: function() {
       this.items.push(this.newitems); //往items中新增newitems
       this.newitems = { name: "", age: "18", sex: "女" };
     }, //新增元素
+    change: function(index) {
+      this.newitems = index; // 修改的位置
+      this.newitems = this.list[index];
+      this.isActive = true;
+    },
     deletePerson: function(index) {
       // 刪一個數組元素
       this.items.splice(index, 1);
